@@ -49,7 +49,7 @@ const ProductListing = () => {
                                 <h3 className="text-xl font-bold text-gray-900 mb-2 truncate">{product.name}</h3>
                                 <p className="text-gray-600 text-sm mb-4 line-clamp-2">{product.description}</p>
                                 <div className="flex justify-between items-center mt-4">
-                                    <span className="text-2xl font-bold text-gray-900">${product.price}</span>
+                                    <span className="text-2xl font-bold text-gray-900">₹{product.price}</span>
                                     <button
                                         onClick={() => handleAddToCart(product)}
                                         className="bg-primary hover:bg-primary-dark text-white font-medium py-2 px-4 rounded-lg transition-colors shadow-sm"

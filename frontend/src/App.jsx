@@ -7,6 +7,7 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import AddProduct from './pages/AddProduct'
 import Profile from './pages/profile'
+import EditProfile from './pages/EditProfile'
 import EditProduct from './pages/EditProduct'
 import Shipping from './pages/Shipping'
 import Payment from './pages/Payment'
@@ -30,6 +31,7 @@ function App() {
             <Route path="/payment" element={<Payment />} />
             <Route path="/placeorder" element={<PlaceOrder />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/edit-profile" element={<EditProfile />} />
           </Routes>
         </main>
       </div>

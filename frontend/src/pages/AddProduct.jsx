@@ -106,7 +106,7 @@ const AddProduct = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
                         <div>
-                            <label className="block text-gray-700 text-sm font-bold mb-2">Price ($)</label>
+                            <label className="block text-gray-700 text-sm font-bold mb-2">Price (₹)</label>
                             <input
                                 type="number"
                                 value={price}
@@ -140,10 +140,7 @@ const AddProduct = () => {
                                 className="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary"
                             >
                                 <option value="kg">kg</option>
-                                <option value="lb">lb</option>
-                                <option value="bunch">bunch</option>
-                                <option value="piece">piece</option>
-                                <option value="box">box</option>
+                                <option value="dozen">dozen</option>
                             </select>
                         </div>
                     </div>

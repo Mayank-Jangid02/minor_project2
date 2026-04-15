@@ -113,7 +113,7 @@ const PlaceOrder = () => {
                                             </div>
                                         </div>
                                         <div className="text-gray-700">
-                                            {item.qty || 1} x ${item.price} = ${((item.qty || 1) * item.price).toFixed(2)}
+                                            {item.qty || 1} x ₹{item.price} = ₹{((item.qty || 1) * item.price).toFixed(2)}
                                         </div>
                                     </li>
                                 ))}
@@ -128,20 +128,20 @@ const PlaceOrder = () => {
                         <div className="space-y-4 mb-6">
                             <div className="flex justify-between">
                                 <span className="text-gray-600">Items</span>
-                                <span className="font-medium">${itemsPrice}</span>
+                                <span className="font-medium">₹{itemsPrice}</span>
                             </div>
                             <div className="flex justify-between">
                                 <span className="text-gray-600">Shipping</span>
-                                <span className="font-medium">${shippingPrice}</span>
+                                <span className="font-medium">₹{shippingPrice}</span>
                             </div>
                             <div className="flex justify-between">
                                 <span className="text-gray-600">Tax</span>
-                                <span className="font-medium">${taxPrice}</span>
+                                <span className="font-medium">₹{taxPrice}</span>
                             </div>
                             <hr />
                             <div className="flex justify-between text-xl font-bold border-t pt-4">
                                 <span>Total</span>
-                                <span>${totalPrice}</span>
+                                <span>₹{totalPrice}</span>
                             </div>
                         </div>
 

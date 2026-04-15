@@ -73,7 +73,7 @@ const Cart = () => {
                                             <h3 className="text-lg font-medium text-gray-900">
                                                 <Link to={`/product/${item._id}`}>{item.name}</Link>
                                             </h3>
-                                            <p className="text-lg font-bold text-gray-900">${item.price}</p>
+                                            <p className="text-lg font-bold text-gray-900">₹{item.price}</p>
                                         </div>
                                         <p className="mt-1 text-sm text-gray-500">{item.category}</p>
                                     </div>
@@ -87,7 +87,7 @@ const Cart = () => {
                         <h2 className="text-lg font-medium text-gray-900 mb-4">Order Summary</h2>
                         <div className="flex justify-between text-base text-gray-600 mb-4">
                             <p>Subtotal ({cartItems.reduce((acc, item) => acc + (item.qty || 1), 0)} items)</p>
-                            <p className="font-medium text-gray-900">${subtotal.toFixed(2)}</p>
+                            <p className="font-medium text-gray-900">₹{subtotal.toFixed(2)}</p>
                         </div>
                         <p className="text-sm text-gray-500 mb-6">Shipping and taxes calculated at checkout.</p>
                         <div className="mt-6">

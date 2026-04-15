@@ -18,6 +18,7 @@ const authUser = async (req, res, next) => {
                 name: user.name,
                 email: user.email,
                 role: user.role,
+                avatar: user.avatar,
             });
         } else {
             res.status(401);
@@ -60,6 +61,7 @@ const registerUser = async (req, res, next) => {
                 name: user.name,
                 email: user.email,
                 role: user.role,
+                avatar: user.avatar,
             });
         } else {
             res.status(400);
@@ -94,6 +96,7 @@ const getUserProfile = async (req, res, next) => {
                 name: user.name,
                 email: user.email,
                 role: user.role,
+                avatar: user.avatar,
             });
         } else {
             res.status(404);
@@ -114,6 +117,7 @@ const updateUserProfile = async (req, res, next) => {
         if (user) {
             user.name = req.body.name || user.name;
             user.email = req.body.email || user.email;
+            user.avatar = req.body.avatar !== undefined ? req.body.avatar : user.avatar;
 
             if (req.body.password) {
                 user.password = req.body.password;
@@ -126,6 +130,7 @@ const updateUserProfile = async (req, res, next) => {
                 name: updatedUser.name,
                 email: updatedUser.email,
                 role: updatedUser.role,
+                avatar: updatedUser.avatar,
             });
         } else {
             res.status(404);
